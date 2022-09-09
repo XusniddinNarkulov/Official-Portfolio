@@ -1,0 +1,91 @@
+.button-container {
+   position: relative;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 2%;
+   width: 60%;
+
+   .btn {
+      height: 8rem;
+      width: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      color: yellow;
+      transition: 0.2s ease;
+      overflow: hidden;
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.8rem;
+      font-weight: 600;
+   }
+
+   .pri,
+   .sec {
+      border: 2px solid var(--color-sec);
+
+      &::before,
+      &::after {
+         position: absolute;
+         content: "";
+         height: 100%;
+         left: 0;
+         transition: 0.2s ease;
+      }
+
+      &::after {
+         transition: 0.4s ease;
+      }
+
+      &:hover {
+         border: none;
+         background-color: var(--color-sec);
+
+         &::before,
+         &::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 65%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+         }
+
+         &::after {
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+      }
+   }
+
+   .sec {
+      background-color: var(--color-pri-light);
+      border: none;
+
+      &:hover {
+         border: 2px solid var(--color-pri);
+         background-color: transparent;
+
+         &::before,
+         &::after {
+            width: 0;
+            // background-color: inherit;
+         }
+      }
+
+      &::before,
+      &::after {
+         width: 65%;
+         left: 0;
+         background-color: rgba(255, 255, 255, 0.16);
+      }
+      &::after {
+         width: 50%;
+         background-color: rgba(255, 255, 255, 0.06);
+      }
+   }
+}
