@@ -42,11 +42,25 @@
             align-items: center;
             transition: 0.2s ease;
             opacity: 0;
+
+            @media (max-width: 1100px) {
+               height: 8rem;
+               width: 8rem;
+            }
+
+            @media (max-width: 900px) {
+               height: 6rem;
+               width: 6rem;
+            }
+            @media (max-width: 600px) {
+               height: 4rem;
+               width: 4rem;
+            }
          }
       }
 
       .active {
-         animation: spin 9s linear infinite;
+         // animation: spin 9s linear infinite;
 
          .circle {
             opacity: 1;

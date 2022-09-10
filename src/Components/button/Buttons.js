@@ -8,7 +8,7 @@ const Buttons = () => {
             Contact Me
          </a>
          <a href="#resume" className="btn sec">
-            Download Resume
+            Resume
          </a>
       </div>
    );

@@ -6,6 +6,7 @@ import Home from "./Components/home/Home";
 import About from "./Components/about/About";
 import Projects from "./Components/projects/Projects";
 import Contact from "./Components/contact/Contact";
+import ScrollUp from "./Components/scrollUp/ScrollUp";
 
 const App = () => {
    return (
@@ -18,6 +19,7 @@ const App = () => {
          <About />
          <Projects />
          <Contact />
+         <ScrollUp />
       </div>
    );
 };

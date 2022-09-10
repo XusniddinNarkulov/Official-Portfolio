@@ -45,10 +45,6 @@ const Contact = () => {
                </h2>
             </a>
          </div>
-
-         <a href="#header" className="scroll-up">
-            <i className="fa-solid fa-circle-arrow-up"></i>
-         </a>
       </div>
    );
 };

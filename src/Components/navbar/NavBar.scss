@@ -18,6 +18,14 @@
    animation: fade-nav-in 1s ease 1 1s forwards;
    opacity: 0;
 
+   @media (max-width: 600px) {
+      flex-direction: row;
+      top: auto;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%) !important;
+   }
+
    @keyframes fade-nav-in {
       to {
          transform: translate(0, -50%);
