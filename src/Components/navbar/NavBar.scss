@@ -73,3 +73,19 @@
       }
    }
 }
+.scroll-down {
+   position: fixed;
+   right: 5%;
+   bottom: 10%;
+   font-size: 4rem;
+   color: yellow;
+   opacity: 0.77;
+
+   &:active {
+      transform: scale(1.04);
+   }
+}
+
+.hide {
+   display: none;
+}

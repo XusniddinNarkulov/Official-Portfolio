@@ -25,10 +25,6 @@ const Home = () => {
 
             <img src={img} alt="frisson" />
          </div>
-
-         <a href="#contacts" className="scroll-down">
-            <i className="fa-solid fa-circle-arrow-down"></i>
-         </a>
       </div>
    );
 };

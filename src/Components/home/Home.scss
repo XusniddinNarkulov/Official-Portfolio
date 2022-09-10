@@ -151,16 +151,5 @@
       }
    }
 
-   .scroll-down {
-      position: absolute;
-      right: 5%;
-      // bottom: 0;
-      font-size: 4rem;
-      color: yellow;
-      opacity: 0.77;
-
-      &:active {
-         transform: scale(1.04);
-      }
-   }
+   
 }

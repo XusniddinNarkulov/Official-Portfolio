@@ -27,51 +27,64 @@ const NavBar = ({ positions }) => {
    console.log(scrollPosition);
 
    return (
-      <div className="navbar">
-         <a
-            href="#header"
-            onClick={(e) => {
-               setHash("");
-               setHash("#header");
-            }}
-            className={hash === "#header" ? "active" : ""}
-         >
-            <i className="fa-solid fa-house-chimney"></i>
-         </a>
+      <>
+         <div className="navbar">
+            <a
+               href="#header"
+               onClick={(e) => {
+                  setHash("");
+                  setHash("#header");
+               }}
+               className={hash === "#header" ? "active" : ""}
+            >
+               <i className="fa-solid fa-house-chimney"></i>
+            </a>
 
-         <a
-            href="#about"
-            onClick={(e) => {
-               setHash("");
-               setHash("#about");
-            }}
-            className={hash === "#about" ? "active" : ""}
-         >
-            <i className="fa-solid fa-id-card"></i>
-         </a>
+            <a
+               href="#about"
+               onClick={(e) => {
+                  setHash("");
+                  setHash("#about");
+               }}
+               className={hash === "#about" ? "active" : ""}
+            >
+               <i className="fa-solid fa-id-card"></i>
+            </a>
 
-         <a
-            href="#projects"
-            onClick={(e) => {
-               setHash("");
-               setHash("#projects");
-            }}
-            className={hash === "#projects" ? "active" : ""}
-         >
-            <i className="fa-solid fa-briefcase"></i>
-         </a>
+            <a
+               href="#projects"
+               onClick={(e) => {
+                  setHash("");
+                  setHash("#projects");
+               }}
+               className={hash === "#projects" ? "active" : ""}
+            >
+               <i className="fa-solid fa-briefcase"></i>
+            </a>
+
+            <a
+               href="#contacts"
+               onClick={(e) => {
+                  setHash("");
+                  setHash("#contacts");
+               }}
+               className={hash === "#contacts" ? "active" : ""}
+            >
+               <i className="fa-solid fa-envelope"></i>
+            </a>
+         </div>
 
          <a
             href="#contacts"
-            onClick={(e) => {
-               setHash("");
-               setHash("#contacts");
-            }}
-            className={hash === "#contacts" ? "active" : ""}
+            className={
+               scrollPosition > contactsY - 300
+                  ? "scroll-down hide"
+                  : "scroll-down"
+            }
          >
-            <i className="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-circle-arrow-down"></i>
          </a>
-      </div>
+      </>
    );
 };
 
