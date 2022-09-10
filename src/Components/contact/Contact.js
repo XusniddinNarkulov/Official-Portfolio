@@ -1,9 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ getPosition }) => {
+   const myRef = useRef();
+
+   useEffect(() => {
+      const position = myRef.current.offsetTop;
+      getPosition(position);
+   }, []);
+
    return (
-      <div className="contact-container" id="contacts">
+      <section className="contact-container" id="contacts" ref={myRef}>
          <h1>
             <span>Contact Me</span>
          </h1>
@@ -45,7 +54,7 @@ const Contact = () => {
                </h2>
             </a>
          </div>
-      </div>
+      </section>
    );
 };
 

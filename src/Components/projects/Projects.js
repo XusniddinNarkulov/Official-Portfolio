@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Projects.scss";
 
-const Projects = () => {
+const Projects = ({ getPosition }) => {
+   const myRef = useRef();
+
+   useEffect(() => {
+      const position = myRef.current.offsetTop;
+      getPosition(position);
+   }, []);
+
    return (
-      <div className="projects-container" id="projects">
+      <div className="projects-container" id="projects" ref={myRef}>
          <h1 className="projects-container__header">
             <span>Projects</span>
          </h1>

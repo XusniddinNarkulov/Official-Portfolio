@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.scss";
 import Buttons from "../button/Buttons";
 
-const About = () => {
+const About = ({ getPosition }) => {
+   const myRef = useRef();
+
+   useEffect(() => {
+      const position = myRef.current.offsetTop;
+      getPosition(position);
+   }, []);
+
    return (
-      <div className="about-container">
+      <div className="about-container" ref={myRef}>
          <h2>
             <span id="about">About Me</span> <br />
             <p>

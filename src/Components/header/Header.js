@@ -2,8 +2,9 @@ import React from "react";
 import "./Header.scss";
 
 const Header = () => {
+   
    return (
-      <section className="header" id="header">
+      <section className="header" id="header" >
          <h3 className="header__name">
             <p>
                I<span>'</span>m
