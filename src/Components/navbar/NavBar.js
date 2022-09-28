@@ -4,13 +4,13 @@ import useScrollPosition from "../../assets/customHooks/ScrollPosition";
 import "./NavBar.scss";
 
 const NavBar = ({ positions }) => {
-   console.log(positions);
-   const [hash, setHash] = useState();
+   // console.log(positions);
+   const [hash, setHash] = useState("#header");
    const scrollPosition = useScrollPosition();
    const { aboutY, projectsY, contactsY } = positions;
 
    useEffect(() => {
-      if (scrollPosition > 0 && scrollPosition < aboutY + 200) {
+      if (scrollPosition > -1 && scrollPosition < aboutY + 200) {
          setHash("#header");
       }
       if (scrollPosition > aboutY && scrollPosition < projectsY) {
@@ -24,7 +24,7 @@ const NavBar = ({ positions }) => {
       }
    }, [scrollPosition]);
 
-   console.log(scrollPosition);
+   // console.log(scrollPosition);
 
    return (
       <>
@@ -32,7 +32,6 @@ const NavBar = ({ positions }) => {
             <a
                href="#header"
                onClick={(e) => {
-                  setHash("");
                   setHash("#header");
                }}
                className={hash === "#header" ? "active" : ""}
@@ -43,7 +42,6 @@ const NavBar = ({ positions }) => {
             <a
                href="#about"
                onClick={(e) => {
-                  setHash("");
                   setHash("#about");
                }}
                className={hash === "#about" ? "active" : ""}
@@ -54,7 +52,6 @@ const NavBar = ({ positions }) => {
             <a
                href="#projects"
                onClick={(e) => {
-                  setHash("");
                   setHash("#projects");
                }}
                className={hash === "#projects" ? "active" : ""}
@@ -65,7 +62,6 @@ const NavBar = ({ positions }) => {
             <a
                href="#contacts"
                onClick={(e) => {
-                  setHash("");
                   setHash("#contacts");
                }}
                className={hash === "#contacts" ? "active" : ""}
