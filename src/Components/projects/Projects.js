@@ -55,7 +55,7 @@ const Projects = ({ getPosition }) => {
             </div>,
          ],
          websiteLink: "https://cosmetics-opal.vercel.app",
-         githubLink: "https://github.com/XusniddinNarkulov/youtube-clone",
+         githubLink: "https://github.com/XusniddinNarkulov/Cosmetics",
       },
    ];
 
