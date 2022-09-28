@@ -40,12 +40,16 @@
       }
 
       &-img {
-         background: url(../../frisson.jpg);
          background-position: center;
-         background-size: cover;
+         background-size: 102%;
          width: 35%;
          border: 2px solid var(--color-sec-light);
          border-radius: 4rem;
+         transition: all 0.2s;
+
+         &:hover {
+            background-size: 130%;
+         }
 
          @media (max-width: 500px) {
             width: 100%;
@@ -53,19 +57,34 @@
          }
       }
 
+      .cryptocoin {
+         background-image: url("./images/cryptocoin.webp");
+      }
+      .youtube-clone {
+         background-image: url("./images/youtube-clone.webp");
+      }
+      .cosmetics {
+         background-image: url("./images/cosmetics.webp");
+      }
+
       &-info {
          font-family: "Open Sans Condensed";
          padding: 3%;
          padding-left: 5%;
+         width: 65%;
 
          @media (max-width: 750px) {
             padding-left: 7%;
+         }
+         @media (max-width: 500px) {
+            width: 100%;
          }
 
          &-name {
             font-size: 3rem;
             font-weight: 500;
             letter-spacing: 2px;
+            text-transform: capitalize;
          }
          &-technologies {
             font-size: 1.6rem;
@@ -87,9 +106,9 @@
 
             a {
                background: var(--color-sec-light);
-               width: 100%;
+               width: 30%;
                text-align: center;
-               padding: 5% 10%;
+               padding: 3% 6%;
                font-size: 1.8rem;
                margin-top: 5%;
                border-radius: 5rem;
@@ -98,10 +117,10 @@
                text-transform: capitalize;
                color: yellow;
 
-               @media (max-width: 500px) {
-                  // padding: 2%;
-                  width: 30%;
-               }
+               // @media (max-width: 500px) {
+               //    // padding: 2%;
+               //    width: 30%;
+               // }
                @media (max-width: 440px) {
                   width: 40%;
                }

@@ -8,18 +8,19 @@ const NavBar = ({ positions }) => {
    const [hash, setHash] = useState("#header");
    const scrollPosition = useScrollPosition();
    const { aboutY, projectsY, contactsY } = positions;
+   // console.log(projectsY);
 
    useEffect(() => {
-      if (scrollPosition > -1 && scrollPosition < aboutY + 200) {
+      if (scrollPosition > -1 && scrollPosition < projectsY - 400) {
          setHash("#header");
       }
-      if (scrollPosition > aboutY && scrollPosition < projectsY) {
-         setHash("#about");
-      }
-      if (scrollPosition > projectsY - 100 && scrollPosition < contactsY) {
+      // if (scrollPosition > aboutY && scrollPosition < projectsY) {
+      //    setHash("#about");
+      // }
+      if (scrollPosition > projectsY - 400 && scrollPosition < contactsY) {
          setHash("#projects");
       }
-      if (scrollPosition > contactsY - 100) {
+      if (scrollPosition > contactsY - 400) {
          setHash("#contacts");
       }
    }, [scrollPosition]);
@@ -39,7 +40,7 @@ const NavBar = ({ positions }) => {
                <i className="fa-solid fa-house-chimney"></i>
             </a>
 
-            <a
+            {/* <a
                href="#about"
                onClick={(e) => {
                   setHash("#about");
@@ -47,7 +48,7 @@ const NavBar = ({ positions }) => {
                className={hash === "#about" ? "active" : ""}
             >
                <i className="fa-solid fa-id-card"></i>
-            </a>
+            </a> */}
 
             <a
                href="#projects"
@@ -73,7 +74,7 @@ const NavBar = ({ positions }) => {
          <a
             href="#contacts"
             className={
-               scrollPosition > contactsY - 300
+               scrollPosition > contactsY - 500
                   ? "scroll-down hide"
                   : "scroll-down"
             }

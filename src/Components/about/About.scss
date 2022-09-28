@@ -28,6 +28,12 @@
          opacity: 1;
          font-weight: 100;
          width: 90%;
+         text-align: center;
+
+         @media (max-width: 600px) {
+            text-indent: 3rem;
+            text-align: start;
+         }
       }
    }
 
