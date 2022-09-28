@@ -3,13 +3,17 @@ import "./Home.scss";
 import img from "./img/frisson.jpg";
 
 const Home = () => {
-   const [active, setActive] = useState(false);
+   const [active, setActive] = useState(true);
+   window.onclick = () => {
+      setActive(false);
+   };
    return (
       <div className="home-container">
          <div className="logo">
             <div
                className={`main-img ${active && "active"}`}
-               onClick={() => {
+               onClick={(e) => {
+                  e.stopPropagation();
                   setActive((prev) => !prev);
                }}
             >
