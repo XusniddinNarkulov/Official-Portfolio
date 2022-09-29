@@ -31,26 +31,26 @@ const Contact = ({ getPosition }) => {
             </a>
 
             <a
-               href="mailto:husniddin_norqulov@mail.ru"
+               href="mailto:norqulovhusniddin3@gmail.com"
                target="_blank"
                rel="noreferrer"
                className="contact email"
             >
                <i className="fa-solid fa-at"></i>
                <h2>
-                  E-Mail <span>husniddin_norqulov@mail.ru</span>
+                  E-Mail <span>norqulovhusniddin3@gmail.com</span>
                </h2>
             </a>
 
             <a
-               href="#tg"
+               href="tel:+998946416403"
                // target="_blank"
                // rel="noreferrer"
                className="contact linkedin"
             >
-               <i className="fa-brands fa-linkedin"></i>
+               <i className="fa-solid fa-phone-flip"></i>
                <h2>
-                  LinkedIn <span>@la_frisson</span>
+                  Phone <span>+998 94 641 64 03</span>
                </h2>
             </a>
          </div>

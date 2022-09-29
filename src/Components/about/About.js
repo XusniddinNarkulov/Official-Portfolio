@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./About.scss";
+
 import Buttons from "../button/Buttons";
+import resume from "./Xusniddin Narkulov React Resume.pdf";
 
 const About = ({ getPosition }) => {
    const myRef = useRef();
@@ -39,7 +41,7 @@ const About = ({ getPosition }) => {
             </div>
          </div>
 
-         <Buttons />
+         <Buttons resume={resume} />
       </div>
    );
 };
