@@ -1,13 +1,13 @@
 .scroll-up {
-   position: absolute;
-   right: 5%;
-   padding-bottom: 5%;
-   font-size: 4rem;
-   color: yellow;
-   opacity: 0.77;
-   z-index: 10;
+    position: absolute;
+    right: 5%;
+    padding-bottom: 5%;
+    font-size: 4rem;
+    color: yellow;
+    opacity: 0.77;
+    z-index: 10;
 
-   &:active {
-      transform: scale(1.04);
-   }
+    &:active {
+        transform: scale(1.04);
+    }
 }

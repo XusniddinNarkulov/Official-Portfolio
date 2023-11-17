@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import "./Contact.scss";
+import { AtIcon, LinkedInIcon, TelegramIcon } from "../../assets/Svgs";
 
 const Contact = ({ getPosition }) => {
     const myRef = useRef();
@@ -21,10 +22,11 @@ const Contact = ({ getPosition }) => {
                 <a
                     href="https://t.me/la_frisson"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer noopener"
                     className="contact telegram"
                 >
-                    <i className="fa-brands fa-telegram"></i>
+                    {/* <i className="fa-brands fa-telegram"></i> */}
+                    <TelegramIcon />
                     <h2>
                         Telegram <span>@la_frisson</span>
                     </h2>
@@ -33,24 +35,26 @@ const Contact = ({ getPosition }) => {
                 <a
                     href="mailto:norqulovhusniddin3@gmail.com"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer noopener"
                     className="contact email"
                 >
-                    <i className="fa-solid fa-at"></i>
+                    {/* <i className="fa-solid fa-at"></i> */}
+                    <AtIcon />
                     <h2>
                         E-Mail <span>norqulovhusniddin3@gmail.com</span>
                     </h2>
                 </a>
 
                 <a
-                    href="tel:+998946416403"
-                    // target="_blank"
-                    // rel="noreferrer"
+                    href="https://www.linkedin.com/in/husniddin-norqulov"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="contact linkedin"
                 >
-                    <i className="fa-solid fa-phone-flip"></i>
+                    {/* <i className="fa-brands fa-linkedin-in"></i> */}
+                    <LinkedInIcon />
                     <h2>
-                        Phone <span>+998 94 641 64 03</span>
+                        LinkedIn <span>husniddin-norqulov</span>
                     </h2>
                 </a>
             </div>

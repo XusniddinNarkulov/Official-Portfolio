@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import useScrollPosition from "../../assets/customHooks/ScrollPosition";
 import "./NavBar.scss";
+import { HomeIcon } from "../../assets/Svgs";
 
 const NavBar = ({ positions }) => {
     const [hash, setHash] = useState("#header");
