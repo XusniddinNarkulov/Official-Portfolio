@@ -1,155 +1,152 @@
 .home-container {
-   position: relative;
-   // min-height: 100vh;
-   padding: 5% 4%;
-   margin-top: 10%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
+    position: relative;
+    // min-height: 100vh;
+    padding: 5% 4%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-   .logo {
-      // position: inherit;
-      // margin-top: -3%;
-      max-height: 52rem;
-      max-width: 52rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      user-select: none;
+    .logo {
+        // position: inherit;
+        // margin-top: -3%;
+        max-height: 52rem;
+        max-width: 52rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        user-select: none;
 
-      .main-img {
-         position: absolute;
-         height: 30rem;
-         width: 30rem;
-         border-radius: 50%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         z-index: 5;
-         cursor: pointer;
-
-         .circle {
+        .main-img {
             position: absolute;
-            height: 10rem;
-            width: 10rem;
+            height: 30rem;
+            width: 30rem;
             border-radius: 50%;
-            background-color: rgb(4, 4, 44);
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.2s ease;
-            opacity: 0;
+            z-index: 5;
+            cursor: pointer;
 
-            @media (max-width: 1100px) {
-               height: 8rem;
-               width: 8rem;
+            .circle {
+                position: absolute;
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                background-color: rgb(4, 4, 44);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.2s ease;
+                opacity: 0;
+
+                @media (max-width: 1100px) {
+                    height: 8rem;
+                    width: 8rem;
+                }
+
+                @media (max-width: 900px) {
+                    height: 6rem;
+                    width: 6rem;
+                }
+                @media (max-width: 600px) {
+                    height: 4rem;
+                    width: 4rem;
+                }
             }
+        }
 
-            @media (max-width: 900px) {
-               height: 6rem;
-               width: 6rem;
+        .active {
+            animation: spin 9s linear infinite;
+
+            .circle {
+                opacity: 1;
+                position: absolute;
+                animation: spin 0.5s;
+                animation-timing-function: ease-in;
+                animation-direction: reverse;
+
+                &:nth-child(1) {
+                    background: url(./img/html.avif);
+                    transform: translateY(-210%);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &:nth-child(2) {
+                    background: url(./img/css.avif);
+                    transform: translate(150%, -150%);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &:nth-child(3) {
+                    background: url(./img/js.avif);
+                    transform: translate(210%);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &:nth-child(4) {
+                    background: url(./img/React.avif);
+                    transform: translate(150%, 150%);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &:nth-child(5) {
+                    background: url(./img/redux.avif);
+                    transform: translateY(210%);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &:nth-child(6) {
+                    background: url(./img/typescript.svg);
+                    transform: translate(-150%, 150%);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-color: aliceblue;
+                }
+                &:nth-child(7) {
+                    background: url(./img/git.webp);
+                    transform: translateX(-210%);
+                    background-size: 80%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: antiquewhite;
+                }
+                &:nth-child(8) {
+                    background: url(./img/github.avif);
+                    transform: translate(-150%, -150%);
+                    background-size: cover;
+                    background-position: center;
+                    background-color: lightgoldenrodyellow;
+                }
             }
-            @media (max-width: 600px) {
-               height: 4rem;
-               width: 4rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
             }
-         }
-      }
+        }
 
-      .active {
-         animation: spin 9s linear infinite;
-
-         .circle {
-            opacity: 1;
+        img {
             position: absolute;
-            animation: spin 0.5s;
-            animation-timing-function: ease-in;
-            animation-direction: reverse;
+            max-height: 200%;
+            max-width: 200%;
+            border-radius: 50%;
+            // border: 3px solid rgb(108, 161, 197);
+            border: 3px solid yellow;
+            transform: translate(-20rem);
+            opacity: 0;
+            animation: fade-in 1s ease 1 0.5s forwards;
+        }
 
-            &:nth-child(1) {
-               background: url(./img/html.png);
-               transform: translateY(-210%);
-               background-size: cover;
-               background-position: center;
+        @keyframes fade-in {
+            to {
+                transform: translate(0);
+                opacity: 1;
             }
-            &:nth-child(2) {
-               background: url(./img/css.jpg);
-               transform: translate(150%, -150%);
-               background-size: cover;
-               background-position: center;
-            }
-            &:nth-child(3) {
-               background: url(./img/js.jpg);
-               transform: translate(210%);
-               background-size: cover;
-               background-position: center;
-            }
-            &:nth-child(4) {
-               background: url(./img/React.jpg);
-               transform: translate(150%, 150%);
-               background-size: cover;
-               background-position: center;
-            }
-            &:nth-child(5) {
-               background: url(./img/redux.png);
-               transform: translateY(210%);
-               background-size: cover;
-               background-position: center;
-            }
-            &:nth-child(6) {
-               background: url(./img/sass.png);
-               transform: translate(-150%, 150%);
-               background-size: 84%;
-               background-position: center;
-               background-repeat: no-repeat;
-               background-color: khaki;
-            }
-            &:nth-child(7) {
-               background: url(./img/git.webp);
-               transform: translateX(-210%);
-               background-size: 80%;
-               background-repeat: no-repeat;
-               background-position: center;
-               background-color: antiquewhite;
-            }
-            &:nth-child(8) {
-               background: url(./img/github.png);
-               transform: translate(-150%, -150%);
-               background-size: cover;
-               background-position: center;
-               background-color: lightgoldenrodyellow;
-            }
-         }
-      }
-
-      @keyframes spin {
-         to {
-            transform: rotate(360deg);
-         }
-      }
-
-      img {
-         position: absolute;
-         max-height: 200%;
-         max-width: 200%;
-         border-radius: 50%;
-         // border: 3px solid rgb(108, 161, 197);
-         border: 3px solid yellow;
-         transform: translate(-20rem);
-         opacity: 0;
-         animation: fade-in 1s ease 1 0.5s forwards;
-      }
-
-      @keyframes fade-in {
-         to {
-            transform: translate(0);
-            opacity: 1;
-         }
-      }
-   }
-
-   
+        }
+    }
 }

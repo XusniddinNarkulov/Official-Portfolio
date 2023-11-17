@@ -1,139 +1,132 @@
 .projects-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin: 10% 0;
-   gap: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+    gap: 5rem;
 
-   &__header {
-      font-size: 2.8rem;
-      font-family: "Open Sans Condensed";
-      letter-spacing: 1px;
+    &__header {
+        font-size: 2.8rem;
+        font-family: "Poppins";
+        letter-spacing: 1px;
 
-      span {
-         border-bottom: 2px solid yellow;
-         padding-bottom: 4px;
-      }
-   }
+        span {
+            border-bottom: 2px solid yellow;
+            padding-bottom: 4px;
+        }
+    }
 
-   &__project {
-      display: flex;
-      // justify-content: center;
-      background-color: rgba(0, 0, 0, 0.171);
-      padding: 2%;
-      border-radius: 5rem;
-      width: 70%;
+    &__project {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.171);
+        padding: 2%;
+        border-radius: 5rem;
+        width: 70%;
 
-      @media (max-width: 800px) {
-         width: 80%;
-         margin-left: 5%;
-      }
+        @media (max-width: 800px) {
+            width: 80%;
+            margin-left: 5%;
+        }
 
-      @media (max-width: 600px) {
-         width: 90%;
-         margin-left: 0;
-      }
+        @media (max-width: 600px) {
+            width: 90%;
+            margin-left: 0;
+        }
 
-      @media (max-width: 500px) {
-         flex-direction: column;
-      }
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
 
-      &-img {
-         background-position: center;
-         background-size: 102%;
-         width: 35%;
-         border: 2px solid var(--color-sec-light);
-         border-radius: 4rem;
-         transition: all 0.2s;
+        &-img {
+            background-position: center;
+            background-size: 102%;
+            width: 35%;
+            border: 2px solid var(--color-sec-light);
+            border-radius: 4rem;
+            transition: all 0.2s;
 
-         &:hover {
-            background-size: 130%;
-         }
-
-         @media (max-width: 500px) {
-            width: 100%;
-            height: 25rem;
-         }
-      }
-
-      .cryptocoin {
-         background-image: url("./images/cryptocoin.webp");
-      }
-      .youtube-clone {
-         background-image: url("./images/youtube-clone.webp");
-      }
-      .cosmetics {
-         background-image: url("./images/cosmetics.webp");
-      }
-
-      &-info {
-         font-family: "Open Sans Condensed";
-         padding: 3%;
-         padding-left: 5%;
-         width: 65%;
-
-         @media (max-width: 750px) {
-            padding-left: 7%;
-         }
-         @media (max-width: 500px) {
-            width: 100%;
-         }
-
-         &-name {
-            font-size: 3rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: capitalize;
-         }
-         &-technologies {
-            font-size: 1.6rem;
-            font-weight: 400;
-            letter-spacing: 1.8px;
-            margin-top: 5%;
-         }
-         &-about {
-            margin-top: 2%;
-            li {
-               font-weight: 100;
-               font-size: 1.8rem;
+            &:hover {
+                background-size: 130%;
             }
-         }
-         &-links {
-            display: flex;
-            // width: 100%;
-            gap: 7%;
 
-            a {
-               background: var(--color-sec-light);
-               width: 30%;
-               text-align: center;
-               padding: 3% 6%;
-               font-size: 1.8rem;
-               margin-top: 5%;
-               border-radius: 5rem;
-               transition: 0.1s ease;
-               text-decoration: none;
-               text-transform: capitalize;
-               color: yellow;
-
-               // @media (max-width: 500px) {
-               //    // padding: 2%;
-               //    width: 30%;
-               // }
-               @media (max-width: 440px) {
-                  width: 40%;
-               }
-
-               &:hover {
-                  background: transparent;
-                  outline: 2px solid var(--color-sec-light);
-               }
-               &:active {
-                  transform: scale(1.04);
-               }
+            @media (max-width: 500px) {
+                width: 100%;
+                height: 25rem;
             }
-         }
-      }
-   }
+        }
+
+        .cryptocoin {
+            background-image: url("./images/cryptocoin.webp");
+        }
+        .youtube-clone {
+            background-image: url("./images/youtube-clone.webp");
+        }
+        .cosmetics {
+            background-image: url("./images/cosmetics.webp");
+        }
+
+        &-info {
+            padding: 3%;
+            padding-left: 5%;
+            width: 65%;
+
+            @media (max-width: 750px) {
+                padding-left: 7%;
+            }
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+
+            &-name {
+                font-size: 3rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+            }
+            &-technologies {
+                font-size: 1.6rem;
+                font-weight: 400;
+                letter-spacing: 1.8px;
+                margin-top: 5%;
+            }
+            &-about {
+                margin-top: 2%;
+                li {
+                    font-weight: 100;
+                    font-size: 1.8rem;
+                }
+            }
+            &-links {
+                display: flex;
+                gap: 7%;
+
+                a {
+                    background: var(--color-sec-light);
+                    width: 30%;
+                    text-align: center;
+                    padding: 3% 6%;
+                    font-size: 1.8rem;
+                    margin-top: 5%;
+                    border-radius: 5rem;
+                    transition: 0.1s ease;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    color: yellow;
+
+                    @media (max-width: 440px) {
+                        width: 40%;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                        outline: 2px solid var(--color-sec-light);
+                    }
+                    &:active {
+                        transform: scale(1.04);
+                    }
+                }
+            }
+        }
+    }
 }
